@@ -1,51 +1,49 @@
-# Challenge_TelecomX_Part_2_Alura
+# 📊 Análisis de la Tasa de Cancelación de Clientes (Churn Rate)
 
-# Análisis de la Tasa de Cancelación de Clientes (Churn Rate)
-
-## Resumen del Proyecto
+## 📝 Resumen del Proyecto
 Este proyecto tuvo como propósito **analizar y predecir la tasa de cancelación (Churn Rate)** de clientes.  
-El objetivo principal fue construir un modelo de Machine Learning capaz de identificar aquellos clientes con mayor probabilidad de abandonar el servicio.  
-A partir del análisis, se determinaron los factores clave detrás de la cancelación y se plantearon **estrategias de retención** fundamentadas en estos hallazgos.
+🎯 El objetivo central fue desarrollar un modelo de Machine Learning capaz de detectar a los clientes con alta probabilidad de cancelar.  
+A partir de este análisis se identificaron **factores determinantes** y se diseñaron **estrategias de retención** basadas en dichos hallazgos.
 
 ---
 
-## Metodología
+## 🔧 Metodología
 
-La segunda fase del proyecto se enfocó en el diseño, evaluación y justificación de los modelos de Machine Learning.  
-El flujo de trabajo contempló los siguientes pasos:
+La segunda etapa del proyecto se concentró en el diseño, entrenamiento y validación de los modelos.  
+El flujo de trabajo incluyó:
 
-### 1. Preparación de Datos y Modelado
-- **División de datos:** 80% para entrenamiento y 20% para prueba, garantizando una evaluación justa.  
-- **Normalización:** Se aplicó a las variables numéricas, paso esencial en modelos sensibles a la escala, como la Regresión Logística.
+### 1️⃣ Preparación de Datos y Modelado
+- ✂️ **División de datos:** 80% entrenamiento / 20% prueba.  
+- 📏 **Normalización:** aplicada a variables numéricas, esencial en modelos sensibles a escala como la **Regresión Logística**.
 
-### 2. Entrenamiento y Evaluación de Modelos
-Se entrenaron dos modelos principales: **Regresión Logística** y **Árbol de Decisión**.
+### 2️⃣ Entrenamiento y Evaluación de Modelos
+Se probaron dos algoritmos principales: **Regresión Logística** y **Árbol de Decisión**.
 
 #### 🔹 Regresión Logística
-- **Rendimiento:** Exactitud del 80%.  
-- **Justificación:** Mostró un buen balance, con resultados consistentes en entrenamiento (79%) y prueba (80%). Esto refleja capacidad de generalización y ausencia de sobreajuste.
+- 📈 **Exactitud:** 80%.  
+- ✅ **Conclusión:** Modelo equilibrado, con resultados similares en entrenamiento (79%) y prueba (80%). Sin señales de sobreajuste.
 
 #### 🔹 Árbol de Decisión
-- **Rendimiento:** Exactitud del 72% en los datos de prueba.  
-- **Justificación:** Presentó sobreajuste claro: 99% de exactitud en entrenamiento frente a solo 72% en prueba, lo que indica falta de generalización.
+- 📉 **Exactitud:** 72% en prueba.  
+- ⚠️ **Conclusión:** Presentó **overfitting**: 99% en entrenamiento pero caída al 72% en prueba.
 
-### 3. Análisis de Importancia de Variables
-Se identificaron las variables más relevantes para explicar la cancelación:  
-- **Charges.Total**  
-- **Charges.Monthly**  
-- **Cuentas_Diarias**  
-- **Contract**  
+### 3️⃣ Análisis de Variables Clave
+Tanto la Regresión Logística como el Árbol de Decisión coincidieron en que los factores más influyentes son:  
+- 💵 **Charges.Total**  
+- 💳 **Charges.Monthly**  
+- 📊 **Cuentas_Diarias**  
+- 📜 **Contract**  
 
-Ambos modelos coincidieron en que los **patrones de gasto y el tipo de contrato** son los factores más determinantes.
+👉 Los **patrones de gasto** y el **tipo de contrato** son los elementos más decisivos en la cancelación.
 
-### 4. Conclusiones y Estrategias
-El modelo elegido como final fue la **Regresión Logística**, por su desempeño y estabilidad.  
+### 4️⃣ Conclusiones y Estrategias
+El modelo seleccionado fue la **Regresión Logística** por su rendimiento y estabilidad.  
 
-Con base en los resultados, se propusieron acciones de retención como:  
-- **Añadir valor agregado:** ofrecer servicios adicionales (ej. streaming, datos extra) a clientes con cargos mensuales elevados.  
-- **Promover contratos largos:** incentivar planes de uno o dos años para reducir la probabilidad de cancelación.
+🔑 Estrategias derivadas del análisis:  
+- 🎁 **Ofrecer valor agregado** → incluir servicios extra (streaming, datos móviles, beneficios exclusivos) para clientes con altos cargos mensuales.  
+- 🤝 **Fomentar contratos largos** → incentivar planes de 1 o 2 años con descuentos y beneficios, reduciendo la tasa de cancelación.
 
 ---
 
-## Archivos Relevantes
-- **modelo_lr.pkl** → Modelo de Regresión Logística serializado con *pickle*, listo para cargarse y usarse en predicciones futuras.
+## 📂 Archivos Relevantes
+- 🗂️ **modelo_lr.pkl** → Modelo de Regresión Logística serializado con *pickle*, listo para predicciones futuras.
